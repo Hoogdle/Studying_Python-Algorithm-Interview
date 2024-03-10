@@ -60,6 +60,7 @@
 
 
 ### 제너레이터의 효율성
+
 # import sys
 
 # a = [n for n in range(10000)]
@@ -70,5 +71,68 @@
 # print(sys.getsizeof(b)) #48
 
 
+### enumerate
+# list,set,tuple과 같은 자료형을 인덱스를 포함한 enumerate 객체로 리턴
+# a = [1,2,3,2,45,2,5]
+# print(enumerate(a)) #<enumerate object at 0x000002090DBF3318>
+# print(list(enumerate(a))) #[(0, 1), (1, 2), (2, 3), (3, 2), (4, 45), (5, 2), (6, 5)]
+
+# 비교 
+# for i in range(len(a)):
+#     print(i,a[i])
+### vs
+# i = 0
+# for v in a:
+#     print(i,v)
+#     i += 1
+### vs
+# for i,v in enumerate(a):
+#     print(i,v) #best!
+
+
+### print
+# ,로 구분 (출력시 콤마대신 띄어쓰기(default) 값 구분)
+# print('A1','B1') #A1 B1
+
+# 파라미터 sep
+# print('A1','B2',sep=',') #A1,B2 (공백대신 ,로 구분)
+
+# 파라미터 end(줄바꿈 제한)
+# print('aa',end=' ')
+# print('bb') #aa bb
+
+# 리스트 출력, .join
+# a = ['A','B']
+# print(' '.join(a)) #A B
+
+# format
+# idx = 1
+# fruit = 'apple'
+
+# print('{0} : {1}'.format(idx+1,fruit)) #2 : apple
+# print('{} : {}'.format(idx+1,fruit)) #2 : apple({}의 인덱스 생략 가능)
+
+# f-string (best)
+# print(f'{idx+1} : {fruit}') #2 : apple
+
+
+### pass
+# 함수 정의 후 빈칸이면 오류 발생
+# pass로 채워주면 해결
+
+
+### locals
+# 로컬에 선언된 모든 변수를 조회할 수 있는 명령, 로컬 스코프에 재한해 정보 조회가능
+# cf) pprint로 가독성 좋은 줄바꿈 가능
+
+# import pprint
+
+# a = 10
+# def hello():
+#     pass
+# pprint.pprint(locals())
+#  'a': 10,
+#  'hello': <function hello at 0x0000018FEB4A4948>,
+#  'pprint': <module 'pprint' from 'c:\\Users\\rlaxo\\anaconda3\\envs\\Pytorch\\lib\\pprint.py'>}
 
 
