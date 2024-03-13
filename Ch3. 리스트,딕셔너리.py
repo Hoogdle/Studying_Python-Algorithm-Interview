@@ -75,3 +75,11 @@
 # b = collections.Counter(a)
 # print(b) #Counter({5: 3, 6: 2, 1: 1, 2: 1, 3: 1, 4: 1})
 
+# Counter 객체에서 가장 빈도 수가 높은 요소 추출 : most_common()
+# a = [1,2,3,4,5,5,5,6,6,]
+# b = collections.Counter(a)
+# print(b.most_common(2)) #[(5, 3), (6, 2)] #빈도가 높은 2개의 요소 추출
+
+# OrderedDict 객체
+# 파이썬 3.6이하에서 딕셔너리의 입력 순서가 유지되도록 해줌
+# 3.7이상에서는 필요 없는 기능
