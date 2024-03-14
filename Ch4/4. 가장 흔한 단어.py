@@ -10,10 +10,24 @@
 # 출력:
 # "ball"
 
-### 나의 코드
-import re
+### 리스트 컴프리헨션, counter 객체 사용
+# def mostCommonWord(self,paragraph,banned):
+#     words = [word for word in re.sub(r'[^\w]','',paragraph) #^은 not, \w은 단어 문자(word character)를 뜻함
+#         .lower().split() 
+#             if word not in banned]
+#     counts = collections.Counter(words) # counts는 collenction모듈의 Counter클래스 객체 init은 words로
+# ex)
+# >>> Counter(["hi", "hey", "hi", "hi", "hello", "hey"])
+# Counter({'hi': 3, 'hey': 2, 'hello': 1})
+    # return counts.most_common(1)[0][0] #collection.Counter.most_common(a) 객체의 최빈값순으로 a개 만큼 반환 (리스트로 둘러싼 튜플 형태 [(,),(,)])
 
-def commonWord(self,s,ban):
-    s = s.lower()
-    s = re.sub('[^a-z ]','',s) #단어와 공백만 존재하게
+# ### cf
+# counts = collections.defaultdict(int) # defaultdict() dict에 만약 key 가 없다면 0으로 초기화하여 생성
+# for word in words:
+#     counts[word] += 1
+
+
+
+    
+    
 
